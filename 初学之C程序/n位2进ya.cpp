@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+int main()
+{
+    int n,x,y,a,k,i,t;
+    scanf("%d",&n);
+    k=pow(2,n)-1;
+    i=0;
+      while(i<=k)
+      {   	  
+	        x=i;
+	        a=1;
+			t=n-a+1;		            
+            while(a<=n)
+			{              
+				while(t>=1)
+                {   
+        	  		y=x%2,x=x/2;
+        	  		t--;
+    	  	    	  //printf(" %d\n",t);
+        	  		//printf(" %d\n",y);
+        	  		//printf(" %d,%d,%d,\n",y,x,t);
+            	}
+        		printf("%d",y);
+        		if(t==0)
+        		{ 
+                           x=i;
+                }
+				a++;
+				t=n-a+1;
+        	}        	
+           printf("\n");
+           i++;
+      }
+     system("pause");
+     return 0;
+}
