@@ -1,0 +1,6 @@
+get_index.cpp为处理AMiner-Author得到author-index.txt（作者和index）
+replace_deal.cpp 为根据得到的author_index替换AMiner-Paper中有效的作者姓名为index，并输出到P_A_record.txt文件
+divide_sparse.cpp 为输入一个年份将数据集P_A_record.txt分割，然后以图的形式存储：（i,j,value），（i,j）为坐标，value为合作次数
+Sparse.py 输入为训练集和测试集数据（图），输出为共同朋友数 对应节点对数 最终成为朋友数（其中默认处理2008年分割的数据，可更改）
+evalue_triple.cpp 输入为训练集和测试集数据（图），输出为计算得到的精准度（AVG_precision）和召回率（AVG_recall）
+处理时使用命令：evalue_triple.exe -train trainset_xxxx.txt -test testset_xxxx.txt -output result_xxxx.txt
